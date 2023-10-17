@@ -8,7 +8,7 @@ Animated GIFs
 
 ### Your glitch page url (or other URL)
 
--- https://glitch.com/@defnededa but it is on https://www.defnededa.com/doodles/GIFS--
+-- https://glitch.com/@defnededa but it is on https://www.defnededa.com/doodles/GIFS --
 
 ### Describe the 6 gifs you made, and what tools each used
 
