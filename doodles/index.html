@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doodles</title>
-    <link rel="stylesheet" href="/index.css" />
+
     <link rel="stylesheet" href="/doodles/doodles.css" />
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script defer src="/index.js"></script>
@@ -35,6 +35,19 @@
     </nav>
 
     <main>
+      <h1>Check out some of my visual experiments!</h1>
+      <br />
+      <p class="text-style-2">
+        This page prioritizes pushing the boundaries of<span
+          class="text-style-1"
+        >
+          p5.js</span
+        >
+        rather than focusing on achieving a high level of visual aesthetics.
+      </p>
+      <br />
+      <p class="text-style-2">Hope you enjoy.</p>
+
       <button class="color-changer" onclick="changeColors()">
         <span class="text">PARTY!</span>
         <span class="blob"></span>
@@ -42,26 +55,39 @@
         <span class="blob"></span>
         <span class="blob"></span>
       </button>
-      
-      <a href="/doodles/GIFS">
-        <button class="color-changer">
-          <span class="text">GIFS</span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-        </button>
 
-      <a href="/doodles/draw">
-        <button class="color-changer">
-          <span class="text">DRAW</span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-          <span class="blob"></span>
-        </button>
-  
+      <button
+        class="color-changer"
+        onclick="window.open('/doodles/GIFS', '_self')"
+      >
+        <span class="text">GIFS</span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+      </button>
 
+      <button
+        class="color-changer"
+        onclick="window.open('/doodles/draw', '_self')"
+      >
+        <span class="text">DRAW</span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+      </button>
+
+      <button
+        class="color-changer"
+        onclick="window.open('/doodles/swarms', '_self')"
+      >
+        <span class="text">SWARMS</span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+      </button>
     </main>
   </body>
 </html>

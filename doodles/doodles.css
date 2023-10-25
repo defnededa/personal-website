@@ -86,3 +86,164 @@ button:hover .blob:nth-child(5) {
 .color-changer:active {
   border: 2px solid #eef0f2;
 }
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(/fonts/PlayfairDisplay-Regular.ttf);
+  font-weight: 400; /*normal and bold*/
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url(/fonts/PlayfairDisplay-Bold.ttf);
+  font-weight: 700;
+}
+
+* {
+  font-family: "Playfair Display";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 8px 32px;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  background: #e4e1e150;
+  padding: 8px 32px;
+  border-radius: 64px;
+  backdrop-filter: blur(4px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+nav li a {
+  color: #190b28;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+nav li a.active {
+  font-weight: 700;
+}
+
+/* MAIN */
+
+main {
+  padding: 200px 64px;
+}
+
+/* BACKGROUND */
+
+.background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  color: #eef0f2;
+}
+
+.blob {
+  width: 1754px;
+  height: 1442px;
+  position: absolute;
+}
+
+.blob.one {
+  top: -739px;
+  left: -151px;
+}
+
+.blob.two {
+  top: 34px;
+  left: -1167px;
+}
+
+.blob.three {
+  top: 439px;
+  left: 776px;
+}
+
+.blob.green {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #63d471 0%,
+    rgba(99, 212, 113, 0) 100%
+  );
+}
+
+.blob.yellow {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f7cb15 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.blob.pink {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ed217c 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.rectangle-bars {
+  display: flex;
+  margin-left: 72px;
+}
+
+.rectangle-bar {
+  width: 320px;
+  height: 16px;
+}
+
+.rectangle-bar.pink {
+  background-color: #ed217c;
+}
+
+.rectangle-bar.green {
+  background-color: #63d471;
+}
+
+.text-style-1 {
+  color: #d01167;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.text-style-2 {
+  color: #190b28;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}

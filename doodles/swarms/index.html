@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <link rel="icon" type="image/png" href="/images/logo.png" />
-      <title>Drawing Tool</title>
+      <title>Defne's Swarms</title>
       <link rel="stylesheet" href="style.css" />
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"
@@ -23,29 +23,41 @@
         referrerpolicy="no-referrer"
       ></script>
 
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.js"
+        integrity="sha512-O6tq+fkhkfCEulJBqTOZ7dsNIA98zy+GTrDmoh5aJL4Wpi8BIcg+cAW5Cfj4cdqtDmLp/5j398Z6BPpjaYjLmQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+
+      <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js" integrity="sha512-TU9AWtV5uUZPX8dbBAH8NQF1tSdigPRRT82vllAQ1Ke28puiqLA6ZVKxtUGlgrH6yWFnkKy+sE6luNEGH9ar0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
       <!--   utility for color picking in HSL   -->
       <script src="colorpicker.js"></script>
 
+      <!--   Main code here   -->
       <script src="app.js"></script>
+      <script src="Vector2D.js"></script>
 
       <!--   Your code here   -->
-      <script src="brushes.js"></script>
+
+      <script src="system-trail.js"></script>
+      <script src="system-second.js"></script>
+      <script src="system-interactive.js"></script>
+      <script src="system-art.js"></script>
     </head>
     <body>
       <header>
         <a href="/doodles">
           <button class="button-89" role="button">GO BACK</button>
         </a>
-        <h1>Defne's Drawing Tool</h1>
-
-        <p>Try my drawing tool!</p>
+        <h1>Defne's Swarms</h1>
+        <p>Play with the swarms!</p>
       </header>
 
       <div id="app">APP</div>
 
       <footer>
-        <br /><br /><br /><br />
-        <br />
         <p>Defne Deda © 2023</p>
       </footer>
     </body>

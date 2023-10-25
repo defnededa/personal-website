@@ -1,0 +1,67 @@
+main {
+  padding: 128px 64px;
+}
+
+/* CARD*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 64px;
+  gap: 64px;
+}
+
+.card {
+  display: block;
+  border: 2px solid #1a090d;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  color: black;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0; /* Slightly smaller radius than card itself to ensure it fits well */
+  background-color: lightgray;
+  object-fit: cover; /* Makes sure your images cover the whole card area without distortion */
+  height: 150px; /* Fixed height for uniformity */
+}
+
+.card h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 0.9em;
+  padding: 0 10px 20px;
+}
+
+.go-back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #1a090d;
+  border-radius: 16px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1a090d;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 20px; /* Adjust this based on where you want the button positioned */
+}
+
+.go-back-button:hover {
+  background-color: #cc0070; /* Light gray background on hover for feedback */
+  color: #ffebf7;
+  border-color: #cc0070;
+}
