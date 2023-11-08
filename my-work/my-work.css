@@ -57,7 +57,8 @@ main {
   text-decoration: none;
   color: #1a090d;
   transition: background-color 0.2s ease-in-out;
-  margin-top: 20px; /* Adjust this based on where you want the button positioned */
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
 .go-back-button:hover {
