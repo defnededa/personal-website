@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Stack the children vertically */
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  background-color: #ffebc9;
+}
+
+header {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  padding-left: 5%;
+  background-color: #fcbd6a;
+}
+
+h3 {
+  margin: 7px 0px 0px 0px;
+}
+
+#app {
+  z-index: 50;
+  flex: 1; /* To allow the container to grow and consume the available space */
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+}
+
+button.active {
+  background-color: hsl(100, 100%, 50%);
+}
+
+/* new */
+button {
+  background-color: #444141;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  margin: 5px;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    90deg,
+    #53cbef 0%,
+    #dcc66c 50%,
+    #ffa3b6 75%,
+    #53cbef 100%
+  );
+  animation: slidernbw 5s linear infinite;
+  color: #000;
+}
+
+@keyframes slidernbw {
+  to {
+    background-position: 20vw;
+  }
+}
+
+.color-display {
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}

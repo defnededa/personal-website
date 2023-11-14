@@ -1,5 +1,5 @@
 main {
-  padding: 128px 64px;
+  padding: 64px 64px;
 }
 
 /* CARD*/
@@ -58,7 +58,7 @@ main {
   color: #1a090d;
   transition: background-color 0.2s ease-in-out;
   margin-top: 20px;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 
 .go-back-button:hover {
