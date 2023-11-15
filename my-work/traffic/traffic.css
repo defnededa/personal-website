@@ -1,0 +1,45 @@
+.exhibit-gallery {
+  display: flex;
+  justify-content: space-around; /* Distributes space around items */
+  align-items: center; /* Aligns items vertically */
+  flex-wrap: nowrap; /* Prevents wrapping */
+  margin-bottom: 20px; /* Space between the images and the paragraph */
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.exhibit-image {
+  width: calc(
+    33.333% - 14px
+  ); /* Splits the row into three, accounting for the gap */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 20px; /* Soft corners like the cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+  margin-left: 50px;
+}
+
+.exhibit-description {
+  text-align: center; /* Centers the text horizontally */
+  padding: 0 20px; /* Padding on the sides */
+  max-width: 800px; /* Maximum width of the paragraph */
+  margin: 20px auto; /* Centers the paragraph block and adds space above and below */
+  font-size: 16pt;
+  color: #190b28;
+}
+
+.exhibit-description-2 {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 16pt;
+  color: #d01167;
+}
+
+/* Responsive adjustments for images */
+@media (max-width: 5px) {
+  .exhibit-image {
+    width: calc(33.333% - 14px); /* Keeps the images on the same row */
+  }
+
+  .exhibit-description {
+    padding: 0 10px; /* Smaller padding on smaller screens */
+  }
+}
