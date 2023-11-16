@@ -4,7 +4,7 @@
   align-items: center;
   flex-wrap: nowrap;
   margin-bottom: 20px;
-  margin-left: 200px;
+  margin-left: 150px;
   margin-right: 200px;
 }
 
@@ -48,4 +48,5 @@
   display: block;
   margin-top: 1%;
   border-radius: 4px;
+  border: 2px solid #1a090d;
 }
