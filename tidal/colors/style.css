@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Stack the children vertically */
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 1rem 5%;
+  background-color: #3f006a;
+  color: #fff;
+}
+
+h3 {
+  margin: 0.5rem 0;
+}
+
+#app {
+  z-index: 50;
+  flex: 1; /* To allow the container to grow and consume the available space */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 2rem 5%;
+}
+
+button.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button {
+  background-color: #444141;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  margin: 5px;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    90deg,
+    #53cbef 0%,
+    #dcc66c 50%,
+    #ffa3b6 75%,
+    #53cbef 100%
+  );
+  animation: slidernbw 5s linear infinite;
+  color: #000;
+}
+
+@keyframes slidebg {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+.color-display-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 0.5rem; /* Adjust spacing between color boxes */
+}
+
+/* Individual color-display box */
+.color-display {
+  padding: 1rem;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px black;
+  flex: 1 1 150px; /* Adjust width of each box */
+}
