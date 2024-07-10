@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     <div class="stamp-canvases">
       <div v-for="(canvas, index) in canvases" :key="index" :ref="'canvas' + index"></div>
     </div>
-    <button class="add-canvas-button" @click="addCanvas">Add Stamp</button>
+    <button class="add-canvas-button" @click="addCanvas">Add New Stamp</button>
   </div>
     `,
 
