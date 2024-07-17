@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // Drawing logic will be handled dynamically
       };
 
-      p.mouseDragged = () => callback(p);
+      p.mouseDragged = () => callback(p); //change all the pointer move pointer down etc
       p.mousePressed = () => callback(p);
       p.mouseReleased = () => callback(p);
 
@@ -33,20 +33,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
     template: `
     <div id="app">
     <div class="canvas-holder">
+      <button class="add-canvas-button" @click="saveMainCanvas">Download your art!</button>
       <div ref="mainCanvas" class="main-canvas"></div>
       <div class="tools-top">
         <label>Stamp Size: </label>
         <input type="range" v-model="stampSize" min="50" max="400" step="10" />
         <div class="stamp-selector">
           <label>Select Stamp: </label>
-          <select class = "styled-select" v-model="selectedStampIndex">
+          <select class="styled-select" v-model="selectedStampIndex">
             <option v-for="(stamp, index) in canvasData" :key="index" :value="index">
               Stamp {{ index + 1 }}
             </option>
           </select>
         </div>
-        <button class="add-canvas-button" @click="setEraser">Stamp Remover</button>
-        <button class="add-canvas-button" @click="captureStamp">Stamp</button>
+        <button 
+          :class="{'main-canvas-button': true, 'highlighted': isEraserActive}" 
+          @click="setEraser"
+        >Stamp Remover</button>
+        <button 
+          :class="{'main-canvas-button': true, 'highlighted': !isEraserActive}" 
+          @click="captureStamp"
+        >Stamp</button>
       </div>
     </div>
     <div class="tools-bottom">
@@ -54,7 +61,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       <color-picker v-model="settings.color1" />
       <label>Brush Size: </label>
       <input type="range" v-model="settings.brushSize" max="10" step=".5" />
-      <button class="add-canvas-button" v-for="brush in displayBrushes" @click="setTool(brush)" v-html="brush.label"></button>
+      <button 
+        :class="{'small-canvas-button': true, 'highlighted': activeBrush.label === brush.label}" 
+        v-for="brush in displayBrushes" 
+        @click="setTool(brush)" 
+        v-html="brush.label">
+      </button>
     </div>
     <div class="stamp-canvases">
       <div v-for="(canvas, index) in canvases" :key="index" :ref="'canvas' + index"></div>
@@ -102,13 +114,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
       },
       captureStamp() {
+        this.isEraserActive = false;
         this.p5Instances.forEach((p, index) => {
           if (p) {
             this.canvasData[index] = p.get();
             console.log(`Captured canvas ${index}:`, this.canvasData[index]);
           }
         });
-        this.isEraserActive = false;
       },
       updateStamp(index) {
         if (this.p5Instances[index]) {
@@ -134,7 +146,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         this.redrawStamps();
       },
       setEraser() {
-        console.log("Eraser activated");
         this.isEraserActive = true;
       },
       setTool(brush) {
@@ -205,6 +216,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         } else {
           this.activeBrush.mouseDragged?.(p, this.settings);
         }
+      },
+      saveMainCanvas() {
+        const canvas = this.mainP.canvas;
+        const link = document.createElement("a");
+        link.download = "canvas.png";
+        link.href = canvas.toDataURL();
+        link.click();
       },
     },
     mounted() {

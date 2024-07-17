@@ -194,3 +194,51 @@ footer a:hover {
 .add-canvas-button:hover {
   background-color: #590066;
 }
+
+.main-canvas-button {
+  background-color: #390043;
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+    box-shadow 0.3s;
+}
+.main-canvas-button:hover {
+  background-color: #ffffff;
+  color: #390043;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.main-canvas-button.highlighted {
+  border-color: #390043;
+  background-color: #ffffff;
+  color: #390043;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.small-canvas-button {
+  background-color: #390043;
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+    box-shadow 0.3s;
+}
+.small-canvas-button:hover {
+  background-color: #ffffff;
+  color: #390043;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.small-canvas-button.highlighted {
+  border-color: #390043;
+  background-color: #ffffff;
+  color: #390043;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
