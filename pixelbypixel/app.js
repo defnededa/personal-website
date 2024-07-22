@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 
   let counter = 1;
+  let main_canvas_side = window.innerWidth / 2 - window.innerWidth / 10;
 
   function sketcher(ref, callback) {
     let functionName = "sketch" + counter;
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     window[functionName] = (p) => {
       p.setup = function () {
-        p.createCanvas(WIDTH / 2, HEIGHT / 2);
+        p.createCanvas(main_canvas_side / 2, main_canvas_side / 2);
         //p.background(255);
       };
       p.draw = function () {
@@ -32,11 +33,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     el: "#app",
     template: `
     <div id="app">
+    
     <div class="canvas-holder">
-      <button class="add-canvas-button" @click="saveMainCanvas">Download your art!</button>
-      <div ref="mainCanvas" class="main-canvas"></div>
-      <div class="tools-top">
-        <label>Stamp Size: </label>
+
+      <div class="canvas-holder-3">
+
+      <div class="buttons-holder">
+
+      <div class="buttons-holder-2">
+      <label>Stamp Size: </label>
         <input type="range" v-model="stampSize" min="50" max="400" step="10" />
         <div class="stamp-selector">
           <label>Select Stamp: </label>
@@ -46,6 +51,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </option>
           </select>
         </div>
+        </div>
+        <div class="buttons-holder-2">
         <button 
           :class="{'main-canvas-button': true, 'highlighted': isEraserActive}" 
           @click="setEraser"
@@ -54,9 +61,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
           :class="{'main-canvas-button': true, 'highlighted': !isEraserActive}" 
           @click="captureStamp"
         >Stamp</button>
+        </div>
+        </div>
+      <div ref="mainCanvas" class="main-canvas"></div>
       </div>
-    </div>
-    <div class="tools-bottom">
+      
+
+
+      <div class="canvas-holder-2">
+
+      <div class="buttons-holder">
+
+      <button class="add-canvas-button" @click="addCanvas">Add New Stamp</button>
+      
       <color-picker v-model="settings.color0" />
       <color-picker v-model="settings.color1" />
       <label>Brush Size: </label>
@@ -67,11 +84,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
         @click="setTool(brush)" 
         v-html="brush.label">
       </button>
-    </div>
-    <div class="stamp-canvases">
+    
+      </div>
+
+      <div class="stamp-canvases">
       <div v-for="(canvas, index) in canvases" :key="index" :ref="'canvas' + index"></div>
-    </div>
-    <button class="add-canvas-button" @click="addCanvas">Add New Stamp</button>
+      
+      </div>
+  
+
+      </div>
+
+
+
+      </div>
+      <button class="add-canvas-button" @click="saveMainCanvas">Download your art here</button>
+      
+    
+      
+     
+
+    
   </div>
     `,
 
@@ -232,7 +265,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         p.frameRate(30);
 
         p.setup = () => {
-          this.mainCanvas = p.createCanvas(WIDTH, HEIGHT);
+          this.mainCanvas = p.createCanvas(main_canvas_side, main_canvas_side);
           p.background(255, 255, 255); //make this changable later
           p.ellipseMode(p.RADIUS);
         };

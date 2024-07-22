@@ -1,5 +1,5 @@
-const WIDTH = 800;
-const HEIGHT = 800;
+const WIDTH = window.innerWidth / 2 - window.innerWidth / 10;
+const HEIGHT = window.innerWidth / 2 - window.innerWidth / 10;
 const DEFAULT_FRAME_RATE = 30;
 const DEFAULT_LOOP_LENGTH_IN_FRAMES = 100;
 
