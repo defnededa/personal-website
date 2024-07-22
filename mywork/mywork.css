@@ -1,0 +1,72 @@
+main {
+  padding: 64px 64px;
+}
+
+/* CARD */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 64px;
+  gap: 48px; /* Slightly reduced gap for a tighter layout */
+}
+
+.card {
+  display: block;
+  border: 2px solid #2c2427; /* Changed to Raisin Black */
+  border-radius: 12px; /* Slightly less rounded for a modern look */
+  width: 400px; /* Increased width for a modern proportion */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #2c2427;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: #fff5e6; /* Light background for cards */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px 12px 0 0; /* Matches card border radius */
+  background-color: #f47a69; /* Placeholder color if image is missing */
+  object-fit: cover;
+  height: 180px; /* Slightly taller for modern aspect ratio */
+}
+
+.card h2 {
+  font-size: 1.6em; /* Slightly larger for better readability */
+  font-weight: bold;
+  margin: 15px 0 10px;
+  color: #2c2427;
+}
+
+.card p {
+  font-size: 1em; /* Uniform font size */
+  padding: 0 20px 20px;
+  color: #2c2427;
+}
+
+/* BUTTON */
+.go-back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #2c2427; /* Changed to Raisin Black */
+  border-radius: 12px; /* Slightly less rounded for consistency */
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2c2427;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.go-back-button:hover {
+  background-color: #d81e5b;
+  color: #fff5e6;
+  border-color: #d81e5b;
+}
