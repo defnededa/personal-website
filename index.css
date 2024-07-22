@@ -21,7 +21,7 @@ body {
   margin: 0;
   width: 100vw;
   height: 100%;
-  background-color: #ffebf7;
+  background-color: #fdf0d5;
 }
 
 body {
@@ -81,21 +81,34 @@ main {
 }
 
 .text-style-1 {
-  color: #d01167;
+  color: #d81e5b;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
 }
+
+.text-style-1 a:visited {
+  color: #d81e5b;
+}
+
+.text-style-1 a:hover {
+  color: #d81e5b;
+}
+
+.text-style-1 a:active {
+  color: #d81e5b;
+}
 .text-style-2 {
-  color: #190b28;
+  color: #2c2427;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+  margin: 5%;
 }
 .header-style {
-  color: #190b28;
+  color: #2c2427;
   font-size: 104px;
   font-style: normal;
   font-weight: 400;
@@ -132,7 +145,7 @@ main {
 }
 
 .rectangle-bar.pink {
-  background-color: #d01167;
+  background-color: #2374ab;
 }
 
 .rectangle-bar.green {
@@ -140,7 +153,7 @@ main {
 }
 
 footer {
-  background-color: #ffebf7;
+  background-color: #fdf0d5;
   padding: 10px;
   text-align: center;
   display: flex;
@@ -149,6 +162,6 @@ footer {
   gap: 20px;
 }
 footer a {
-  color: #190b28;
+  color: #2c2427;
   text-decoration: none;
 }
