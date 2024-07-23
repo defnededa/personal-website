@@ -6,6 +6,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f0f5;
   color: #291f35;
+  overflow-x: hidden;
 }
 
 header {
@@ -31,6 +32,7 @@ header h1 {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .canvas-holder {

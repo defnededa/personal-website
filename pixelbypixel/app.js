@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       p.setup = function () {
         p.createCanvas(main_canvas_side / 2, main_canvas_side / 2);
         //p.background(255);
+        p.canvas.addEventListener("touchstart", handleTouch);
+        p.canvas.addEventListener("touchmove", handleTouch);
+        p.canvas.addEventListener("touchend", handleTouch);
       };
       p.draw = function () {
         // Drawing logic will be handled dynamically
@@ -20,6 +23,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       p.mouseDragged = () => callback(p); //change all the pointer move pointer down etc
       p.mousePressed = () => callback(p);
       p.mouseReleased = () => callback(p);
+
+      function handleTouch(event) {
+        event.preventDefault(); // Prevent scrolling
+        callback(p);
+      }
 
       if (typeof callback === "function") {
         callback(p);
