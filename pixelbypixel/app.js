@@ -216,16 +216,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
         this.redrawStamps();
       },
       eraseStamp(x, y) {
-        const stampToRemove = this.stamps.findIndex(
-          (stamp) =>
+        let closestStampIndex = -1;
+        let closestDistance = Infinity;
+
+        this.stamps.forEach((stamp, index) => {
+          const dx = x - stamp.x;
+          const dy = y - stamp.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (
             x > stamp.x - stamp.size / 2 &&
             x < stamp.x + stamp.size / 2 &&
             y > stamp.y - stamp.size / 2 &&
             y < stamp.y + stamp.size / 2
-        );
+          ) {
+            if (
+              distance < closestDistance ||
+              (distance === closestDistance && index > closestStampIndex)
+            ) {
+              closestDistance = distance;
+              closestStampIndex = index;
+            }
+          }
+        });
 
-        if (stampToRemove !== -1) {
-          this.stamps.splice(stampToRemove, 1);
+        if (closestStampIndex !== -1) {
+          this.stamps.splice(closestStampIndex, 1);
           this.redrawStamps();
         }
       },
