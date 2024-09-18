@@ -1,0 +1,581 @@
+/* Background Pattern */
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  background-image: linear-gradient(
+      90deg,
+      transparent 50px,
+      #ffb4b8 50px,
+      #ffb4b8 52px,
+      transparent 52px
+    ),
+    linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+  background-size: 100% 30px;
+  background-attachment: fixed; /* Fixes the background in place */
+}
+
+/* Base styles */
+body {
+  font-family: "Lora", serif;
+  color: var(--black);
+  background-color: var(--baby-powder);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: rgb(20, 62, 102);
+}
+
+/* Variables for the new color palette */
+:root {
+  --red-cmyk: #ed1c24ff;
+  --baby-powder: #fdfffcff;
+  --lapis-lazuli: rgb(20, 62, 102);
+  --school-bus-yellow: #f1d302ff;
+  --black: #020100ff;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--lapis-lazuli); /* Lapis Lazuli for headings */
+  letter-spacing: 1px; /* Add some spacing for a modern look */
+  margin: 20px 0;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 96px; /* Larger size */
+  color: #020100; /* Black text */
+
+  padding: 10px;
+  display: inline-block;
+  animation: popIn 0.7s ease-out forwards; /* Pop-in animation */
+  transform: scale(0); /* Start small to create the pop effect */
+  transition: transform 0.3s ease-out;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: underline wavy #ed1c24 5px;
+}
+
+/* Harsher Animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0); /* Start invisible */
+  }
+  60% {
+    transform: scale(1.3); /* Larger for a quick pop */
+  }
+  100% {
+    transform: scale(1); /* Settle back to normal size */
+  }
+}
+
+h2 {
+  font-size: 36px;
+  text-decoration: underline overline dotted #f1d302 5px;
+  font-style: italic;
+  padding: 8px;
+  display: inline-block;
+  animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+  animation-delay: 0.8s; /* Delays until after h1 animation */
+  opacity: 0; /* Initially hidden */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 22px;
+}
+
+/* Body Text */
+p {
+  font-family: "Lora", serif;
+  color: var(--black);
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Links */
+a {
+  color: var(--red-cmyk); /* Red CMYK for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--school-bus-yellow); /* Yellow on hover */
+}
+
+/* Blockquotes */
+blockquote {
+  font-family: "Lora", serif;
+  font-style: italic;
+  background-color: var(--baby-powder);
+  padding: 10px 20px;
+  border-left: 4px solid var(--lapis-lazuli); /* Stylish left border */
+  margin: 20px 0;
+}
+
+a {
+  color: var(--red-cmyk);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--school-bus-yellow);
+}
+
+/* Buttons */
+button,
+.button {
+  background-color: var(--school-bus-yellow);
+  color: var(--black);
+  border: none;
+  padding: 10px 20px;
+  font-family: "Bebas Neue", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--red-cmyk);
+}
+
+/* Portfolio Grid */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Auto-fill the columns */
+  gap: 30px;
+  padding: 20px;
+}
+
+.portfolio-item {
+  background-color: #ed1c24; /* Initial background color */
+  padding: 20px;
+  border: 5px solid var(--black); /* Thick, bold border */
+  border-radius: 0; /* No rounded corners */
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.6); /* Bold shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease; /* Added background transition */
+  color: #020100; /* Text color */
+  position: relative;
+  overflow: hidden;
+  text-align: center; /* Center all text */
+}
+
+.portfolio-item:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f1d302; /* Change background on hover */
+}
+
+.portfolio-item h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #020100; /* Text color */
+}
+
+.portfolio-item p {
+  font-family: "Lora", serif;
+  font-size: 16px;
+  color: #020100;
+}
+
+/* Glitch Effect for the title on hover */
+.portfolio-item:hover h3 {
+  animation: glitch 0.3s infinite;
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+/* Centered Navigation Menu */
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%; /* Align it in the center horizontally */
+  transform: translateX(-50%); /* Move it back by 50% of its width */
+
+  width: 100%; /* Ensure it spans the width of the page */
+  z-index: 1000; /* Ensure it stays above other content */
+  padding: 10px 0;
+  text-align: center; /* Center the text */
+  backdrop-filter: blur(2px);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+/* Button Style for Menu */
+nav ul li a {
+  background: var(--school-bus-yellow);
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid var(--black);
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  color: var(--black);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav ul li a:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+  background-color: var(--red-cmyk);
+  color: var(--black);
+}
+
+nav ul li a:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.1em;
+  background-color: var(--black);
+  color: var(--school-bus-yellow);
+}
+
+/* Padding for better spacing */
+header,
+section,
+footer {
+  padding: 20px;
+  text-align: center;
+}
+/* Chunky Rectangle */
+.chunky-container {
+  background-color: #fdfffc; /* White background */
+  border: 5px solid #020100; /* Thick, bold black border */
+  padding: 20px;
+  width: auto;
+  max-width: 800px; /* Optional: Adjust width as needed */
+  margin: 0 auto; /* Center the container */
+  text-align: left; /* Text alignment */
+  font-family: "Lora", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+/* LinkedIn Button - Chunky with Shadow */
+.linkedin-button {
+  background-color: #fff;
+  border: 3px solid #0077b5; /* Thick border */
+  padding: 10px;
+  position: relative;
+  width: 8em;
+  height: 3em;
+  transition: 0.5s;
+  font-size: 18px;
+
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3); /* Shadow for raised effect */
+  text-align: center; /* Center text */
+}
+
+.linkedin-button p {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertical text centering */
+  transition: 0.5s;
+  color: #0077b5;
+}
+
+.linkedin-button svg {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1.2em;
+  fill: #fff;
+}
+
+.linkedin-button:hover p {
+  color: #fff;
+}
+
+.linkedin-button:hover svg {
+  opacity: 1;
+}
+
+.linkedin-button:hover {
+  background-color: #0077b5;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Email Button - Chunky with Shadow */
+.email-button {
+  background-color: #fff;
+  border: 3px solid #ed1c24; /* Thick border */
+  padding: 10px;
+  position: relative;
+  width: 8em;
+  height: 3em;
+  transition: 0.5s;
+  font-size: 18px;
+
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3); /* Shadow for raised effect */
+  text-align: center; /* Center text */
+  margin-left: 20px;
+}
+
+.email-button p {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertical text centering */
+  transition: 0.5s;
+  color: #ed1c24;
+}
+
+.email-button svg {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1.2em;
+  fill: #fff;
+}
+
+.email-button:hover p {
+  color: #fff;
+}
+
+.email-button:hover svg {
+  opacity: 1;
+}
+
+.email-button:hover {
+  background-color: #ed1c24;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Wavy Red Underline */
+.wavy-underline {
+  text-decoration: underline;
+  text-decoration-color: #ed1c24; /* Red underline */
+  text-decoration-style: wavy;
+  font-weight: bold; /* Bold for emphasis */
+}
+
+.loader {
+  width: 100%; /* Full width to allow centering */
+  height: 200px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers content horizontally */
+  margin: 20px auto; /* Optional: Adjusts space around the loader */
+}
+
+.truckWrapper {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  overflow-x: hidden;
+}
+/* truck upper body */
+.truckBody {
+  width: 130px;
+  height: fit-content;
+  margin-bottom: 6px;
+  animation: motion 1s linear infinite;
+}
+/* truck suspension animation*/
+@keyframes motion {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* truck's tires */
+.truckTires {
+  width: 130px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 15px;
+  position: absolute;
+  bottom: 0;
+}
+.truckTires svg {
+  width: 24px;
+}
+
+.road {
+  width: 100%;
+  height: 1.5px;
+  background-color: #020100;
+  position: relative;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 3px;
+}
+.road::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #020100;
+  right: -50%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 10px solid white;
+}
+.road::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: #282828;
+  right: -65%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 4px solid white;
+}
+
+.lampPost {
+  position: absolute;
+  bottom: 0;
+  right: -90%;
+  height: 90px;
+  animation: roadAnimation 1.4s linear infinite;
+}
+
+@keyframes roadAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-top: 70px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    align-items: flex-end;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    width: 70%; /* Thinner buttons for mobile */
+    padding: 0.5em 0.8em; /* Smaller padding to make the buttons slimmer */
+    font-size: 16px; /* Slightly reduce font size for mobile */
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 18px;
+  }
+
+  nav ul {
+    display: inline-block;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+}
