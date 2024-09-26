@@ -79,7 +79,7 @@ h1 {
 
 h2 {
   font-size: 36px;
-  text-decoration: underline overline dotted #f1d302 5px;
+  text-decoration: underline double #f1d302 5px;
   font-style: italic;
   padding: 8px;
   display: inline-block;
