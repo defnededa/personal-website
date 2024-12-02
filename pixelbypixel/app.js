@@ -96,15 +96,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
       </div>
 
       <div class="stamp-canvases">
-      <div v-for="(canvas, index) in canvases" :key="index" :ref="'canvas' + index"></div>
+      <div v-for="(canvas, index) in canvases" :key="index">
+                <div class="stamp-label">Stamp {{ index + 1 }}↓</div>
+                <div :ref="'canvas' + index"></div>
       
       </div>
-  
-
       </div>
-
-
-
+      </div>
       </div>
       <button class="add-canvas-button" @click="saveMainCanvas">Download your art here</button>
       

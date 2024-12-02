@@ -8,8 +8,7 @@ const STARTING_COLOR1 = [320, 100, 50];
 const STARTING_BRUSH_SIZE = 1;
 
 function startDrawing(p) {
-  // Change if you want to start with a different background,
-  // or even *no background!*
+  //bg color
   p.background(0, 100, 0);
 }
 
