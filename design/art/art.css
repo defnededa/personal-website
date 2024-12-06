@@ -1,3 +1,18 @@
+.icon-pic {
+  margin-right: 16px; /* Add some spacing between the image and navigation */
+  padding: 32px 16px 0px 16px;
+  max-width: 72px;
+}
+.nav-holder {
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* Card Container */
 .card-container {
   display: grid;

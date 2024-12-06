@@ -54,7 +54,7 @@ nav li a.active {
 /* MAIN */
 
 main {
-  padding: 128px 64px;
+  padding: 10% 5%;
 }
 
 .nav-holder {
@@ -144,12 +144,10 @@ main {
 }
 
 .fitter {
-  margin-left: 0%;
   align-items: center;
 }
 
 .fitter.image {
-  margin-left: 0%;
   align-items: center;
 }
 
@@ -173,22 +171,28 @@ footer {
   gap: 20px;
   font-family: "Yeseva One";
   color: #071739;
+  text-decoration: none;
 }
 footer a {
   color: var(--darkb);
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .text-style-1,
   .text-style-2 {
     font-size: 20px; /* Adjust text size for readability */
     line-height: 28px;
     align-items: center;
+    margin: 0%;
+    margin-top: 5%;
   }
 
   .header-style {
     font-size: 48px; /* Adjust header size for smaller screens */
+  }
+  .header-container {
+    margin-top: 10%;
   }
 
   .about-content {
@@ -212,6 +216,10 @@ footer a {
     margin-right: auto;
     width: 50%;
   }
+  .background {
+    background-image: none;
+    background-color: var(--light);
+  }
 }
 
 @media (max-width: 480px) {
@@ -227,6 +235,10 @@ footer a {
   }
 
   .background {
-    background-size: contain;
+    background-color: var(--light);
+  }
+
+  footer p {
+    font-size: 12px;
   }
 }
