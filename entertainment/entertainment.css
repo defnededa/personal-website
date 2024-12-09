@@ -1,3 +1,11 @@
+:root {
+  --darkb: #071739;
+  --blue: #30229f;
+  --light: #f3f2fc;
+  --beige: #ebdac8;
+  --red: #af0e03;
+}
+
 .entertainment-background {
   position: absolute;
   z-index: -1;
@@ -5,4 +13,68 @@
   height: 100%;
   background-image: url("/images/bg1.svg");
   background-size: cover;
+}
+
+h2 {
+  color: var(--red);
+  text-align: center;
+  font-family: Arima;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  flex-shrink: 0;
+  margin-top: -2%;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: -5%;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.spacer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  color: var(--darkb);
+  text-align: left;
+  font-family: Arima;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  flex-shrink: 0;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Adjust gap between images */
+  padding: 20px; /* Optional padding around the grid */
+  align-items: center;
+  justify-content: center;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures consistent cropping */
+}
+
+.image-container-2 {
+  width: calc(33.333% - 14px);
+  height: auto;
+}
+.brandbook-gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
 }

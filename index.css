@@ -178,6 +178,17 @@ footer a {
   text-decoration: none;
 }
 
+/*LINks*/
+.link-style-blue a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.link-style-blue a:visited {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   .text-style-1,
   .text-style-2 {
