@@ -50,6 +50,7 @@ h1 {
   text-decoration: none;
   overflow: hidden;
   margin: 2%;
+  background-color: var(--light);
 }
 
 .vd-each:hover {
