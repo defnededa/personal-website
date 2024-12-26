@@ -78,10 +78,19 @@ h1 {
   margin: 2%;
 }
 
+.header-topper {
+  display: none;
+  margin-bottom: 72px;
+}
+
 @media (max-width: 480px) {
   h1 {
     font-size: 36px; /* Further adjust header size */
-    margin-top: 15%;
+    margin-top: 0%;
+  }
+
+  .header-topper {
+    display: block;
   }
 
   footer p {
